@@ -1,17 +1,21 @@
 class Movie
-  attr_reader :movie_title, :release_year, :mpaa_rating, :run_time, :play_times
-  attr_accessor :theater
+  attr_reader :movie_title, :release_year, :mpaa_rating, :runtime
+  attr_accessor  :showtimes, :theater
 
   def initialize(args = {})
     @movie_title = args[:movie_title]
     @release_year = args[:release_year]
     @mpaa_rating = args[:mpaa_rating]
-    @run_time = args[:run_time]
+    @runtime = args[:runtime]
     @theater = args[:theater]
-    @play_times = []
+    @showtimes = []
   end
 
-  # def 
-  #
-  # end
+  def movie_runtime
+
+  end
+
+  def set_showtimes
+
+  end
 end
