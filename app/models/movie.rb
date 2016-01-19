@@ -10,4 +10,8 @@ class Movie
     @theater = args[:theater]
     @play_times = []
   end
+
+  # def 
+  #
+  # end
 end
