@@ -3,7 +3,7 @@ require_relative '../models/movie'
 require_relative '../models/theater'
 
 class ShowtimesController
-  def movie_showtimes(filename)
+  def movie_theater_scheduler(filename)
     @movies_array = []
     @theater_array = []
 

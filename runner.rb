@@ -4,4 +4,4 @@ require 'time'
 filename = ARGV.first
 todays_showtimes = ShowtimesController.new
 puts "Running your file: #{filename}"
-todays_showtimes.movie_showtimes(filename)
+todays_showtimes.movie_theater_scheduler(filename)

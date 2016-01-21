@@ -11,32 +11,47 @@ class Movie
     @showtimes = []
   end
 
+  def runtime
+    # format movie runtime
+  end
+
   def runtime_with_changeover
-
-  end
-
-  def set_next_showtime
-
-  end
-
-  def set_first_showtime
-
+    # runtime + 35 minutes
   end
 
   def set_last_showtime
-
+    # set movies to end right at closing_time
   end
 
-  def round_up
+  def set_first_showtime
+    # set first movies to start an hour after opening_time
+  end
+
+  def set_next_showtime
+    # set remaining movies showtimes in between first and last
+  end
+
+  def round_showtimes
+    # round up minute of showtimes to end with 0 or 5
+  end
+
+  def set_movie_showtimes
+    set_last_showtime
+    set_first_showtime
+    set_next_showtimes
+  end
+
+  def display_movie_info
 
   end
 
   def display_movie_showtimes
-
+    # iterate through and display showtimes
   end
 
   def display_movie_theater_scheduler
-    set_showtimes
+    set_movie_showtimes
+    display_movie_info
     display_movie_showtimes
   end
 end
