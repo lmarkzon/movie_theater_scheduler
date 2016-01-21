@@ -13,10 +13,12 @@ class Movie
 
   def runtime
     # format movie runtime
+    runtime.strftime("%M")
   end
 
   def runtime_with_changeover
     # runtime + 35 minutes
+
   end
 
   def set_last_showtime

@@ -1,8 +1,11 @@
-Movie Theater Location,Movie Title,Release Year,MPAA Rating,Runtime
-LocationA,There's Something About Mary,1998,R,2:14
-LocationA,How to Lose a Guy in 10 Days,2003,PG-13,1:56
-LocationB,Knocked Up,2007,R,2:08
-LocationB,The Wedding Singer,1998,PG-13,1:36
-LocationC,High Fidelity,2000,R,1:54
-LocationC,Sleepless in Seattle,1993,PG,1:46
-LocationD,The Proposal,2009,PG-13,1:48
+There's Something About Mary,LocationA,1998,R,2:14
+How to Lose a Guy in 10 Days,LocationA,2003,PG-13,1:56
+Knocked Up,LocationB,2007,R,2:08
+The Wedding Singer,LocationB,1998,PG-13,1:36
+High Fidelity,LocationC,2000,R,1:54
+Sleepless in Seattle,LocationC,1993,PG,1:46
+The Proposal,LocationD,2009,PG-13,1:48
+LocationA,11:00,23:00
+LocationB,11:00,23:00
+LocationC,11:00,23:00
+LocationD,11:00,23:00
