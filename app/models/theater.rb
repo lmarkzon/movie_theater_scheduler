@@ -15,4 +15,12 @@ class Theater
   def closing_time
     Time.parse(@closing_time)
   end
+
+  def total_time_open
+    # total number of minutes open in a day
+  end
+
+  def display_hours
+    # display hours open
+  end
 end
