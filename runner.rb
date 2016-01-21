@@ -1,4 +1,5 @@
 require_relative 'app/controllers/showtimes_controller'
+require 'time'
 
 filename = ARGV.first
 todays_showtimes = ShowtimesController.new
