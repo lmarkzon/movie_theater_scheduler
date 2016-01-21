@@ -11,11 +11,32 @@ class Movie
     @showtimes = []
   end
 
-  def movie_runtime
+  def runtime_with_changeover
 
   end
 
-  def set_showtimes
+  def set_next_showtime
 
+  end
+
+  def set_first_showtime
+
+  end
+
+  def set_last_showtime
+
+  end
+
+  def round_up
+
+  end
+
+  def display_movie_showtimes
+
+  end
+
+  def display_movie_theater_scheduler
+    set_showtimes
+    display_movie_showtimes
   end
 end
