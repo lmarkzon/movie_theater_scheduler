@@ -8,27 +8,31 @@ class ShowtimesController
     @theater_array = []
 
     CSV.foreach(filename, :headers => false) do |row|
-      # if ...
+      if row[0] == 'Theater'
+        theater_parser(row)
+      else
         movie_parser(row)
-      # if/else ...
-        theater_parser
+        end
       end
-    display_movie_theater_schedule()
+    display_movie_theater_schedule(@theater_array)
   end
 
   def movie_parser(row)
-    @movie = Movie.new(theater: row[0], movie_title: row[1], release_year: row[2], mpaa_rating: row[3], runtime: row[4])
+    @movie = Movie.new(movie_title: row[0], theater: row[1], release_year: row[2], mpaa_rating: row[3], runtime: row[4])
     @movies_array.push(@movie)
-    puts @movies_array
+    # puts @movies_array
   end
 
   def theater_parser(row)
-    @theater = Theater.new(location: row[0], opening_time: row[1], closing_time: row[2])
+    @theater = Theater.new(location: row[1], opening_time: row[2], closing_time: row[3])
     @theater_array.push(@theater)
-    puts @theater_array
+    # puts @theater_array
   end
 
-  def display_movie_theater_schedule
-
+  def display_movie_theater_schedule(theater_array)
+    theater_array.each do |array|
+      array.display_location_and_hours
+        array.movies.each {|array| array.print_movie_schedule }
+    end
   end
 end

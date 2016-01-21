@@ -12,7 +12,8 @@ class Movie
   end
 
   def runtime
-    # format movie runtime
+    runtime = Time.parse(movie.runtime)
+    runtime = runtime.hour * 60 + duration.min
     runtime.strftime("%M")
   end
 

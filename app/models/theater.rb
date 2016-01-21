@@ -1,3 +1,5 @@
+require 'time'
+
 class Theater
   attr_accessor :location, :opening_time, :closing_time, :movies
 
@@ -9,17 +11,15 @@ class Theater
   end
 
   def opening_time
-    Time.parse(@opening_time)
+    Time.parse(@opening_time).strftime('%I:%M %p')
   end
 
   def closing_time
-    Time.parse(@opening_time)
+    Time.parse(@closing_time).strftime('%I:%M %p')
   end
 
-  def total_time_open
-    # total number of minutes open in a day
-
-  end
+  # def total_time_open
+  # ends
 
   def set_theater_hours(row)
     if t.friday? or t.saturday? or t.sunday?
@@ -32,6 +32,6 @@ class Theater
   end
 
   def display_location_and_hours
-    # display theater location and hours open
+    puts "Theater #{location} is open today from #{opening_time} - #{closing_time}"
   end
 end

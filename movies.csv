@@ -5,7 +5,7 @@ The Wedding Singer,LocationB,1998,PG-13,1:36
 High Fidelity,LocationC,2000,R,1:54
 Sleepless in Seattle,LocationC,1993,PG,1:46
 The Proposal,LocationD,2009,PG-13,1:48
-LocationA,11:00,23:00
-LocationB,11:00,23:00
-LocationC,11:00,23:00
-LocationD,11:00,23:00
+Theater,LocationA,11:00,23:00
+Theater,LocationB,11:00,23:00
+Theater,LocationC,11:00,23:00
+Theater,LocationD,11:00,23:00
