@@ -20,7 +20,7 @@ class Theater
     # total number of minutes open in a day
   end
 
-  def display_hours
-    # display hours open
+  def display_location_and_hours
+    # display theater location and hours open
   end
 end
