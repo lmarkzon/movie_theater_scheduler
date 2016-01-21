@@ -22,11 +22,14 @@ class ShowtimesController
     @movies_array << @movie
   end
 
-  def display_theater_showtimes
+  # def theater_parser(row)
+  # end
 
+  def set_theater_movies
+    # set movies to assigned theaters?
   end
 
-  def display_showtimes(theaters)
-
+  def display_movie_theater_schedule(theaters)
+    # list theater, and it's movies with showtimes
   end
 end
