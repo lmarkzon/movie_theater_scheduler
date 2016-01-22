@@ -30,15 +30,4 @@ class Theater
       @closing_time
     end
   end
-
-  def display_date_info
-    puts Time.now.strftime("%A, %m/%d/%Y")
-  end
-
-  def display_theater_info
-    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    puts "#{location} "
-    display_date_info
-    puts "Hours: #{opening_time.strftime('%I:%M %P')} to #{closing_time.strftime('%I:%M %P')}"
-  end
 end

@@ -1,3 +1,4 @@
+require_relative '../views/movie'
 require 'time'
 
 class Movie
@@ -67,28 +68,5 @@ class Movie
     # set_last_showtime
     set_first_showtime(theater)
     set_next_showtimes
-  end
-
-  def display_movie_info
-    puts "\n"
-    puts "#{movie_title}" + " - Rated: #{mpaa_rating}, #{runtime_parser}"
-  end
-
-  def display_movie_showtimes
-    current_showtimes = []
-
-    showtimes.map do |showtime|
-      showtime_formatted = showtime.strftime('%I:%M %P')
-      # endtime_formatted = movie_endtimes.strftime('%I:%M %P')
-
-      current_showtimes.push " #{showtime_formatted}" # - #{endtime_formatted}
-    end
-    puts current_showtimes
-  end
-
-  def display_movie_scheduler
-    schedule_movie_showtimes
-    display_movie_info
-    display_movie_showtimes
   end
 end
