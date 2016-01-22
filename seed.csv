@@ -1,0 +1,29 @@
+Movie,There's Something About Mary,1998,R,2:15
+Movie,How to Lose a Guy in 10 Days,2003,PG-13,1:56
+Movie,Knocked Up,2007,R,2:08
+Movie,The Wedding Singer,1998,PG-13,1:36
+Movie,High Fidelity,2000,R,1:54
+Movie,Sleepless in Seattle,1993,PG,1:46
+Movie,The Proposal,2009,PG-13,1:48
+Theater,LocationA,11:00,23:00
+Theater,LocationB,11:00,23:00
+Theater,LocationC,11:00,23:00
+Theater,LocationD,11:00,23:00
+Set,There's Something About Mary,LocationA
+Set,There's Something About Mary,LocationC
+Set,There's Something About Mary,LocationD
+Set,How to Lose a Guy in 10 Days,LocationA
+Set,How to Lose a Guy in 10 Days,LocationB
+Set,Knocked Up,LocationB
+Set,Knocked Up,LocationC
+Set,The Wedding Singer,LocationA
+Set,The Wedding Singer,LocationB
+Set,The Wedding Singer,LocationD
+Set,High Fidelity,LocationA
+Set,High Fidelity,LocationB
+Set,High Fidelity,LocationC
+Set,High Fidelity,LocationD
+Set,Sleepless in Seattle,LocationB
+Set,Sleepless in Seattle,LocationD
+Set,The Proposal,LocationC
+Set,The Proposal,Location
