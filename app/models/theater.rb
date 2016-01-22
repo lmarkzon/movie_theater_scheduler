@@ -1,3 +1,4 @@
+require_relative '../views/theater'
 require 'time'
 
 class Theater

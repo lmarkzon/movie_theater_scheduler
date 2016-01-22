@@ -4,6 +4,7 @@ require 'csv'
 
 class ShowtimesController
   def initialize
+    @theater_view = TheaterView.new
     @theater_array = []
     @movie_array = []
   end
@@ -52,7 +53,7 @@ class ShowtimesController
 
   def display_movie_theater_scheduler(theaters)
     theaters.each do |theater|
-      theater.display_theater_info
+      @theater_view.display_theater_info(theater)
       theater.movies.each do |movie|
         movie.display_movie_scheduler
       end
