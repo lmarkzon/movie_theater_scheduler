@@ -58,6 +58,11 @@ class Movie
     end
   end
 
+  # def movie_endtimes
+  #   showtimes.map do |showtime|
+  #
+  # end
+
   def schedule_movie_showtimes
     # set_last_showtime
     set_first_showtime(theater)
@@ -74,7 +79,9 @@ class Movie
 
     showtimes.map do |showtime|
       showtime_formatted = showtime.strftime('%I:%M %P')
-      current_showtimes.push " #{showtime_formatted}"
+      # endtime_formatted = movie_endtimes.strftime('%I:%M %P')
+
+      current_showtimes.push " #{showtime_formatted}" # - #{endtime_formatted}
     end
     puts current_showtimes
   end
