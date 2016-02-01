@@ -1,7 +1,7 @@
 class MovieView
   def display_movie_info(movie)
     puts "\n"
-    puts Rainbow("#{movie.movie_title}" + " - Rated: #{movie.mpaa_rating}, #{movie.runtime_parser}").cyan
+    puts Rainbow("#{movie.movie_title}" + " - Rated: #{movie.mpaa_rating}, #{movie.movie_runtime}").cyan
   end
 
   def display_movie_showtimes(movie)

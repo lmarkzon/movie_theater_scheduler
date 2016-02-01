@@ -14,21 +14,21 @@ class Movie
     @showtimes = []
   end
 
-  def runtime_parser
+  def movie_runtime
     current_runtime = self.runtime
   end
 
-  def movie_runtime
-    runtime = Time.parse(runtime_parser)
+  def movie_runtime_parser
+    runtime = Time.parse(movie_runtime)
   end
 
   def runtime_with_changeover
-    split_runtime = runtime_parser.split(':')
+    split_runtime = movie_runtime.split(':')
     runtime_hour = split_runtime[0].to_i * (60 * 60)
     runtime_min = split_runtime[1].to_i * 60
     changeover_time = (35 * 60)
 
-    (runtime_hour  + runtime_min + changeover_time)
+    (runtime_hour + runtime_min + changeover_time)
   end
 
   def set_first_showtime(theater)
@@ -38,13 +38,12 @@ class Movie
     round_showtimes(showtimes[0])
   end
 
-  # def set_last_showtime
-  # end
+  def last_possible_showtime
+    theater_closing_time = theater.closing_time
+    theater_closing_time - runtime_with_changeover
+  end
 
   def set_next_showtimes
-    theater_closing_time = theater.closing_time
-    last_possible_showtime = theater_closing_time - runtime_with_changeover
-
     until showtimes.last + runtime_with_changeover > last_possible_showtime
       showtimes.push round_showtimes(showtimes.last + runtime_with_changeover)
     end
@@ -65,7 +64,6 @@ class Movie
   # end
 
   def schedule_movie_showtimes
-    # set_last_showtime
     set_first_showtime(theater)
     set_next_showtimes
   end
