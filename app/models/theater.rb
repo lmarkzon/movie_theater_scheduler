@@ -21,8 +21,6 @@ class Theater
 
   def set_theater_hours(row)
     if t.friday? or t.saturday? or t.sunday?
-      @opening_time -= 30.strftime("%m")
-      @closing_time += 30.strftime("%m")
       # opening_time == 10:30('%I:%M %A')
       # closing_time == 23:30('%I:%M %P')
     else
