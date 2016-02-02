@@ -58,11 +58,6 @@ class Movie
     end
   end
 
-  # def movie_endtimes
-  #   showtimes.map do |showtime|
-  #
-  # end
-
   def schedule_movie_showtimes
     set_first_showtime(theater)
     set_next_showtimes
