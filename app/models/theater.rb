@@ -11,21 +11,25 @@ class Theater
     @movies = []
   end
 
+  def today
+    Time.now
+  end
+
   def opening_time
-    Time.parse(@opening_time)
+    if today.friday? or today.saturday? or today.sunday?
+      # Time.parse(@opening_time)
+      @opening_time -= (30 * 60)
+    else
+      Time.parse(@opening_time)
+    end
   end
 
   def closing_time
-    Time.parse(@closing_time)
-  end
-
-  def set_theater_hours(row)
-    if t.friday? or t.saturday? or t.sunday?
-      # opening_time == 10:30('%I:%M %A')
-      # closing_time == 23:30('%I:%M %P')
+    if today.friday? or today.saturday? or today.sunday?
+      # Time.parse(@closing_time)
+      @closing_time += (30 * 60)
     else
-      @opening_time
-      @closing_time
+      Time.parse(@closing_time)
     end
   end
 end
