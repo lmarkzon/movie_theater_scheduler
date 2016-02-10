@@ -1,7 +1,7 @@
 class MovieView
   def display_movie_info(movie)
     puts "\n"
-    puts Rainbow("#{movie.movie_title}" + " - Rated: #{movie.mpaa_rating}, #{movie.movie_runtime}").cyan
+    puts Rainbow(movie.movie_title + " - Rated: " + movie.mpaa_rating + ", " + movie.movie_runtime).cyan
   end
 
   def display_movie_showtimes(movie)
@@ -9,9 +9,8 @@ class MovieView
 
     movie.showtimes.map do |showtime|
       showtime_formatted = showtime.strftime('%I:%M %P')
-      # endtime_formatted = movie_endtimes.strftime('%I:%M %P')
 
-      current_showtimes.push Rainbow(" #{showtime_formatted}").bright.cyan # - #{endtime_formatted}
+      current_showtimes.push Rainbow(showtime_formatted).bright.cyan
     end
     puts current_showtimes
   end

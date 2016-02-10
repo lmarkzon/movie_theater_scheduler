@@ -13,14 +13,11 @@ class ShowtimesController
   def movie_theater_scheduler(filename)
     CSV.foreach(filename) do |row|
       case
-        when row[0] == 'Theater'
-          theater_parser(row)
-        when row[0] == 'Movie'
-          movie_parser(row)
-        when row[0] == 'Set'
-          set_theater_movies(row)
-        else
-          puts "Please enter a file with valid information."
+      when row[0] == 'Theater' then theater_parser(row)
+      when row[0] == 'Movie' then movie_parser(row)
+      when row[0] == 'Set' then set_theater_movies(row)
+      else
+        puts "Please enter a file with valid information."
       end
     end
     display_movie_theater_scheduler(@theater_array)
@@ -29,13 +26,11 @@ class ShowtimesController
   def theater_parser(row)
     @theater = Theater.new(location: row[1], opening_time: row[2], closing_time: row[3])
     @theater_array << @theater
-    # puts @theater_array
   end
 
   def movie_parser(row)
     @movie = Movie.new(movie_title: row[1], release_year: row[2], mpaa_rating: row[3], runtime: row[4])
     @movie_array << @movie
-    # puts @movie_array
   end
 
   def set_theater_movies(row)

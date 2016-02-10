@@ -51,8 +51,7 @@ class Movie
 
   def round_showtimes(showtime)
     case
-     when showtime.min % 5 != 0
-      Time.at((showtime.to_time.to_i / 300.0).ceil * 300)
+    when showtime.min % 5 != 0 then Time.at((showtime.to_time.to_i / 300.0).ceil * 300)
     else
       showtime
     end
