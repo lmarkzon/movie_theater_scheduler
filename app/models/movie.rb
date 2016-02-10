@@ -16,7 +16,7 @@ class Movie
   end
 
   def movie_runtime
-    self.runtime
+    runtime
   end
 
   def movie_runtime_parser

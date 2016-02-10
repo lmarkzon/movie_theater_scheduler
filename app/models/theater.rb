@@ -17,14 +17,14 @@ class Theater
   end
 
   def opening_time
-    if today.friday? or today.saturday? or today.sunday? then @opening_time = Time.parse("10:30")
+    if today.friday? or today.saturday? or today.sunday? then opening_time = Time.parse("10:30")
     else
       Time.parse(@opening_time)
     end
   end
 
   def closing_time
-    if today.friday? or today.saturday? or today.sunday? then @closing_time = Time.parse("23:30")
+    if today.friday? or today.saturday? or today.sunday? then closing_time = Time.parse("23:30")
     else
       Time.parse(@closing_time)
     end
