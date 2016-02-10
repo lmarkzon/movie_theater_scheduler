@@ -2,6 +2,7 @@ require_relative '../views/movie'
 require 'time'
 
 class Movie
+
   attr_reader :movie_title, :release_year, :mpaa_rating, :runtime
   attr_accessor  :showtimes, :theater
 
@@ -15,26 +16,26 @@ class Movie
   end
 
   def movie_runtime
-    current_runtime = self.runtime
+    self.runtime
   end
 
   def movie_runtime_parser
-    runtime = Time.parse(movie_runtime)
+    Time.parse(movie_runtime)
   end
 
   def runtime_with_changeover
-    split_runtime = movie_runtime.split(':')
-    runtime_hour = split_runtime[0].to_i * (60 * 60)
-    runtime_min = split_runtime[1].to_i * 60
+    split_runtime = movie_runtime.split(":").map(&:to_i)
+    runtime_hours = split_runtime[0] * (60 * 60)
+    runtime_mins = split_runtime[1] * 60
     changeover_time = (35 * 60)
 
-    (runtime_hour + runtime_min + changeover_time)
+    runtime_hours + runtime_mins + changeover_time
   end
 
   def set_first_showtime(theater)
     first_possible_showtime = theater.opening_time
 
-    showtimes.push first_possible_showtime if showtimes.length == 0
+    showtimes.push first_possible_showtime if showtimes.empty?
     round_showtimes(showtimes[0])
   end
 
@@ -44,8 +45,8 @@ class Movie
   end
 
   def set_next_showtimes
-    until showtimes.last + runtime_with_changeover > last_possible_showtime
-      showtimes.push round_showtimes(showtimes.last + runtime_with_changeover)
+    until showtimes[-1] + runtime_with_changeover > last_possible_showtime
+      showtimes.push round_showtimes(showtimes[-1] + runtime_with_changeover)
     end
   end
 
